@@ -2,7 +2,7 @@
   "name": "test-task",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/nataliia-smalchenko/test-task",
+  "homepage": "https://nataliia-smalchenko.github.io/test-task",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.3",
     "@testing-library/jest-dom": "^5.16.3",
@@ -11,6 +11,7 @@
     "axios": "^1.6.8",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-loader-spinner": "^6.1.6",
     "react-redux": "^9.1.1",
     "react-router-dom": "^6.23.0",
     "react-scripts": "5.0.1",
