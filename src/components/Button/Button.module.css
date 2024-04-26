@@ -1,5 +1,5 @@
 .button {
-  display: flex;
+  display: inline-flex;
   padding: 16px 40px;
   justify-content: center;
   align-items: center;
@@ -7,7 +7,7 @@
 
   border-radius: 200px;
   border: none;
-  background: #e44848;
+  background-color: #e44848;
 
   color: #fff;
 
@@ -15,9 +15,27 @@
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: -0.02em;
+  transition: background-color ease-in 200ms;
 }
 
 .button:hover,
 .button:focus {
-  background: #d84343;
+  background-color: #d84343;
+}
+
+.load-more {
+  display: flex;
+  padding: 16px 32px;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 200px;
+  border: 1px solid rgba(71, 84, 103, 0.2);
+  transition: background-color ease-in 200ms;
+}
+
+.load-more:hover,
+.load-more:focus {
+  border: 1px solid var(--Button, #e44848);
 }

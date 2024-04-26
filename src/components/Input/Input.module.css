@@ -1,0 +1,22 @@
+.input {
+  display: flex;
+  padding: 18px;
+  gap: 10px;
+  border-radius: 10px;
+  background: #f7f7f7;
+  line-height: 1.25;
+  border: none;
+}
+
+.input:focus {
+  outline-color: #f2f4f7;
+  outline-width: 1px;
+}
+
+.input::placeholder {
+  color: rgba(16, 24, 40, 0.6);
+}
+
+.s {
+  padding-left: 44px;
+}
