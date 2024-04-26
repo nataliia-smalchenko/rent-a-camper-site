@@ -1,20 +1,30 @@
 .header {
-  padding: 20px 32px;
-  background-color: #f5f0fc;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  padding: 24px 64px;
+  background-color: #e44848;
+}
+
+.nav {
+  width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .nav-list {
   list-style-type: none;
   display: flex;
-  column-gap: 16px;
+  column-gap: 24px;
 }
 
 .link {
-  color: #212121;
+  font-family: inherit;
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
   font-size: 20px;
+  transition: transform ease-in 200ms;
+}
+
+.link:hover,
+.link:focus {
+  transform: scale(110%);
 }

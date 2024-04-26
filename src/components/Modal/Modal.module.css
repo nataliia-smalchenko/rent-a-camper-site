@@ -1,4 +1,15 @@
-.card {
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 212);
+  flex-shrink: 0;
+  background: rgba(17, 18, 19, 0.4);
+}
+
+.modal {
+  background-color: white;
   display: flex;
   width: 888px;
   padding: 24px;

@@ -5,12 +5,13 @@ import Button from 'components/Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleFavorites } from 'store/favoritesSlice';
 import { selectFavorites } from 'store/selectors';
+import { toggleModal } from 'store/advertsSlice';
 
 const CamperCard = props => {
   const dispatch = useDispatch();
   const favorites = useSelector(selectFavorites);
 
-  const toggleModal = () => {
+  const localToggleModal = () => {
     dispatch(toggleModal(props.item._id));
   };
 
@@ -87,7 +88,12 @@ const CamperCard = props => {
             <Tag icon="#icon-air" text="AC" />
           )}
         </ul>
-        <Button text="Show more" type="button" loadMore="" />
+        <Button
+          text="Show more"
+          type="button"
+          loadMore=""
+          onClick={localToggleModal}
+        />
       </div>
     </div>
   );

@@ -19,6 +19,7 @@ code {
 
 button {
   cursor: pointer;
+  font-family: inherit;
 }
 
 h1,
@@ -60,4 +61,8 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.active {
+  border-bottom: 1px solid white;
 }
