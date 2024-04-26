@@ -1,12 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
-import { selectAdverts } from 'store/selectors';
 import Header from './Header/Header';
 import HomePage from 'pages/HomePage/HomePage';
 import CatalogPage from 'pages/CatalogPage/CatalogPage';
 import FavoritesPage from 'pages/FavoritesPage/FavoritesPage';
 
 export const App = () => {
-  console.log(selectAdverts);
   return (
     <Routes>
       <Route path="/" element={<Header />}>
