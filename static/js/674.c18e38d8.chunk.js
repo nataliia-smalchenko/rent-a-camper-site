@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktest_task=self.webpackChunktest_task||[]).push([[674],{8674:function(e,t,a){a.r(t),a.d(t,{default:function(){return l}});var s="HomePage_section__bINJC",r="HomePage_header__04GYX",n="HomePage_link__-d+Of",c=a(1087),o=a(184),l=function(){return(0,o.jsxs)("section",{className:s,children:[(0,o.jsx)("h1",{className:r,children:"Explore the Great Outdoors: Premier Camper Rentals for Your Next Adventure"}),(0,o.jsx)(c.rU,{className:n,to:"/catalog",children:"Open catalog"})]})}}}]);
+//# sourceMappingURL=674.c18e38d8.chunk.js.map
