@@ -1,10 +1,12 @@
 import css from './Input.module.css';
 
 const Input = props => {
-  return props.location != 'undefined' ? (
+  console.log(props.location !== 'undefined');
+  return props.location !== 'undefined' ? (
     <input
       className={css.input}
       type={props.type}
+      name={props.name}
       pattern={props.pattern}
       placeholder={props.placeholder}
     ></input>
@@ -12,7 +14,7 @@ const Input = props => {
     <>
       <label htmlFor="location"></label>
       <input
-        className={css.input + ' ' + css.s}
+        className={css.s}
         name="location"
         type={props.type}
         pattern={props.pattern}

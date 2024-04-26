@@ -4,7 +4,6 @@ import css from './CamperCard.module.css';
 import Button from 'components/Button/Button';
 
 const CamperCard = props => {
-  console.log(props.item);
   return (
     <div className={css.card}>
       <img

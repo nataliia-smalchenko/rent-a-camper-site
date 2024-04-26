@@ -26,7 +26,6 @@ const CatalogPage = () => {
     setPage(prev => prev + 1);
   };
 
-  console.log(adverts);
   return (
     <section className={css.section}>
       <h1 className="visually-hidden">Catalog of campers</h1>
