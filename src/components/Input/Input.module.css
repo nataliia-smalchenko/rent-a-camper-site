@@ -4,8 +4,10 @@
   gap: 10px;
   border-radius: 10px;
   background: #f7f7f7;
+  font-size: 16px;
   line-height: 1.25;
   border: none;
+  color: #101828;
 }
 
 .input:focus {
@@ -17,7 +19,31 @@
   color: rgba(16, 24, 40, 0.6);
 }
 
-.s {
-  background-color: blue;
+.input-container {
+  width: 360px;
+  position: relative;
+}
+
+.label {
+  color: rgba(16, 24, 40, 0.6);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.with-icon {
+  width: 360px;
   padding-left: 44px;
+  box-sizing: border-box;
+}
+
+.icon {
+  position: absolute;
+  fill: #10182899;
+  top: 18px;
+  left: 18px;
+}
+
+.input:focus + .icon {
+  fill: #101828;
 }

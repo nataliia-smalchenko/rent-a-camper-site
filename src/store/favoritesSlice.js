@@ -4,16 +4,21 @@ const favoritesSlice = createSlice({
   name: 'favorites',
   initialState: { favoriteCampersIds: [] },
   reducers: {
-    deleteFavorite: (state, action) => {
-      state.favoriteCampersIds = state.contacts.filter(
-        el => el !== action.payload
-      );
-    },
-    addFavorite: (state, action) => {
-      state.favoriteCampersIds = [...state.contacts, action.payload];
+    toggleFavorites: (state, action) => {
+      const id = action.payload;
+      if (state.favoriteCampersIds.includes(id)) {
+        state.favoriteCampersIds = state.favoriteCampersIds.filter(
+          el => el !== action.payload
+        );
+      } else {
+        state.favoriteCampersIds = [
+          ...state.favoriteCampersIds,
+          action.payload,
+        ];
+      }
     },
   },
 });
 
 export const favoritesReducer = favoritesSlice.reducer;
-export const { updateFavorites } = favoritesSlice.actions;
+export const { toggleFavorites } = favoritesSlice.actions;

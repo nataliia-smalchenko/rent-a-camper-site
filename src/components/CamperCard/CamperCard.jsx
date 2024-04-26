@@ -2,8 +2,22 @@ import Tag from 'components/Tag/Tag';
 import sprite from '../../images/sprite.svg';
 import css from './CamperCard.module.css';
 import Button from 'components/Button/Button';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleFavorites } from 'store/favoritesSlice';
+import { selectFavorites } from 'store/selectors';
 
 const CamperCard = props => {
+  const dispatch = useDispatch();
+  const favorites = useSelector(selectFavorites);
+
+  const toggleModal = () => {
+    dispatch(toggleModal(props.item._id));
+  };
+
+  const toggleFavorite = () => {
+    dispatch(toggleFavorites(props.item._id));
+  };
+
   return (
     <div className={css.card}>
       <img
@@ -18,8 +32,16 @@ const CamperCard = props => {
             <span className={css.price}>
               {'€' + props.item.price.toFixed(2)}
             </span>
-            <button className={css['favorite-button']}>
-              <svg className={css['icon-favorite']} width="24" height="24">
+            <button className={css['favorite-button']} onClick={toggleFavorite}>
+              <svg
+                className={
+                  favorites.includes(props.item._id)
+                    ? `${css['icon-favorite']} ${css.active}`
+                    : css['icon-favorite']
+                }
+                width="24"
+                height="24"
+              >
                 <use href={sprite + '#icon-heart'} />
               </svg>
             </button>

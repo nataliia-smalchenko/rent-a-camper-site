@@ -13,10 +13,18 @@ const handleRejected = (state, action) => {
 
 const advertsSlice = createSlice({
   name: 'adverts',
-  initialState: { items: [], isLoading: false, error: null },
+  initialState: {
+    items: [],
+    isLoading: false,
+    error: null,
+    modalShowId: false,
+  },
   reducers: {
     updateAdverts: (state, action) => {
       state.items = action.payload;
+    },
+    toggleModal: (state, action) => {
+      state.modalShowId = action.payload;
     },
   },
   extraReducers: builder =>
@@ -30,4 +38,4 @@ const advertsSlice = createSlice({
 });
 
 export const advertsReducer = advertsSlice.reducer;
-export const { updateAadverts } = advertsSlice.actions;
+export const { updateAadverts, toggleModal } = advertsSlice.actions;

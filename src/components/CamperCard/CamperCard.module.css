@@ -71,7 +71,7 @@
   transform: scale(120%);
 }
 
-.icon-favorite.active {
+.active {
   fill: #e44848;
   stroke: #e44848;
 }
