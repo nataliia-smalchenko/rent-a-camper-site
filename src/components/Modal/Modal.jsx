@@ -25,17 +25,23 @@ const Modal = props => {
   };
 
   const toggleFeatures = evt => {
-    evt.target.classList.toggle('checked');
+    const reviews = document.querySelector('.js-reviews');
+    reviews.classList.remove(css.checked);
+    evt.target.classList.add(css.checked);
     setFeaturesReviewsToggle('features');
   };
 
   const toggleReviews = evt => {
-    evt.target.classList.toggle('checked');
+    const features = document.querySelector('.js-features');
+    features.classList.remove(css.checked);
+    evt.target.classList.add(css.checked);
     setFeaturesReviewsToggle('reviews');
   };
 
   useEffect(() => {
-    setFeaturesReviewsToggle('features');
+    const features = document.querySelector('.js-features');
+    features.classList.add(css.checked);
+
     const closeByEscape = evt => {
       if (evt.code === 'Escape') {
         document.documentElement.classList.remove('no-scroll');
@@ -104,7 +110,7 @@ const Modal = props => {
           <ul className={css['radio-list']}>
             <li>
               <label
-                className={css['radio-label']}
+                className={css['radio-label'] + ' js-features'}
                 htmlFor="features"
                 onClick={toggleFeatures}
               >
@@ -122,7 +128,7 @@ const Modal = props => {
             </li>
             <li>
               <label
-                className={css['radio-label']}
+                className={css['radio-label'] + ' js-reviews'}
                 htmlFor="reviews"
                 onClick={toggleReviews}
               >
