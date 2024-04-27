@@ -1,12 +1,19 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAdverts } from 'store/api';
-import { selectAdverts, selectError, selectIsLoading } from 'store/selectors';
+import {
+  selectAdverts,
+  selectCamperById,
+  selectError,
+  selectIsLoading,
+  selectModalShowId,
+} from 'store/selectors';
 import css from './CatalogPage.module.css';
 import Filters from 'components/Filters/Filters';
 import Error from 'components/Error/Error';
 import CamperCard from 'components/CamperCard/CamperCard';
 import Button from 'components/Button/Button';
+import Modal from 'components/Modal/Modal';
 
 // const CamperCard = lazy(() => import('components/CamperCard/CamperCard'));
 
@@ -16,6 +23,8 @@ const CatalogPage = () => {
   const dispatch = useDispatch();
   const adverts = useSelector(selectAdverts);
   const [page, setPage] = useState(1);
+  const showModal = useSelector(selectModalShowId);
+  const selectedCamper = useSelector(selectCamperById);
 
   useEffect(() => {
     dispatch(fetchAdverts());
@@ -48,6 +57,7 @@ const CatalogPage = () => {
               />
             )}
           </div>
+          {showModal && <Modal item={selectedCamper} />}
         </div>
       )}
     </section>

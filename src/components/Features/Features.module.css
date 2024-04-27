@@ -1,0 +1,11 @@
+.details {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+  width: 525px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
