@@ -1,5 +1,6 @@
 import css from './Reviews.module.css';
 import sprite from '../../images/sprite.svg';
+import { nanoid } from '@reduxjs/toolkit';
 
 const Reviews = props => {
   const drawStars = rating => {
@@ -11,7 +12,7 @@ const Reviews = props => {
       <ul className={css.stars}>
         {list.map(star => {
           return (
-            <li>
+            <li key={nanoid()}>
               <svg width="16" height="16">
                 <use href={sprite + (star ? '#icon-star' : '#icon-star-2')} />
               </svg>
@@ -30,7 +31,7 @@ const Reviews = props => {
     <ul className={css.reviews}>
       {props.list.map(review => {
         return (
-          <li>
+          <li key={nanoid()}>
             <div className={css['author-wrapper']}>
               <div className={css.avatar}>{review.reviewer_name.charAt(0)}</div>
               <div className={css['name-wrapper']}>
