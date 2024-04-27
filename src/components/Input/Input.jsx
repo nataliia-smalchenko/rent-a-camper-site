@@ -4,11 +4,12 @@ const Input = props => {
   if (props.location === undefined) {
     return (
       <input
-        className={css.input}
+        className={css.input + ' ' + props.class}
         type={props.type}
         name={props.name}
         pattern={props.pattern}
         placeholder={props.placeholder}
+        required={props.required}
       ></input>
     );
   } else {
@@ -22,7 +23,6 @@ const Input = props => {
             className={css.input + ' ' + css['with-icon']}
             name="location"
             type={props.type}
-            pattern={props.pattern}
             placeholder={props.placeholder}
           ></input>
           <svg className={css.icon} width="20" height="20">
