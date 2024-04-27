@@ -28,7 +28,7 @@
 }
 
 .scrolled {
-  height: calc(100vh - 160px);
+  height: calc(100vh - 160px - 134px);
   padding-right: 16px;
   overflow: auto;
 }
@@ -45,7 +45,7 @@
 }
 
 .gallery {
-  margin-top: 24px;
+  margin-top: 12px;
   display: flex;
   gap: 16px;
 }
@@ -65,6 +65,7 @@
   display: flex;
   align-items: flex-start;
   gap: 16px;
+  margin-bottom: 16px;
 }
 
 .price {
@@ -75,7 +76,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: 1.25;
-  margin-top: 16px;
+  margin-bottom: 12px;
 }
 
 .img {
@@ -129,4 +130,11 @@
 
 .line {
   border: 1px solid rgba(16, 24, 40, 0.2);
+}
+
+.descr-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
 }

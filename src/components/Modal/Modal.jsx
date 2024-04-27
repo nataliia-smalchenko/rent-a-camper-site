@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { toggleModal } from 'store/advertsSlice';
 import Form from 'components/Form/Form';
 import Feautures from 'components/Features/Features';
+import Reviews from 'components/Reviews/Reviews';
 
 const Modal = props => {
   const dispatch = useDispatch();
@@ -57,32 +58,32 @@ const Modal = props => {
   return (
     <div className={css.backdrop} onClick={closeModal}>
       <div className={css.modal}>
-        <div className={css.scrolled}>
-          <button className={css.close} onClick={closeModal}>
-            <svg className={css.icon} width="32" height="32">
-              <use href={sprite + '#icon-close'} />
+        <button className={css.close} onClick={closeModal}>
+          <svg className={css.icon} width="32" height="32">
+            <use href={sprite + '#icon-close'} />
+          </svg>
+        </button>
+
+        <h2 className={css.title}>{props.item.name}</h2>
+        <div className={css['loc-price-wrapper']}>
+          <div className={css.tag}>
+            <svg className={css.icon} width="16" height="16">
+              <use href={sprite + '#icon-star'} />
             </svg>
-          </button>
-
-          <h3 className={css.title}>{props.item.name}</h3>
-          <div className={css['loc-price-wrapper']}>
-            <div className={css.tag}>
-              <svg className={css.icon} width="16" height="16">
-                <use href={sprite + '#icon-star'} />
-              </svg>
-              <span
-                className={css.rating}
-              >{`${props.item.rating} (${props.item.reviews.length} Reviews)`}</span>
-            </div>
-            <div className={css.tag}>
-              <svg className={css.icon} width="16" height="16">
-                <use href={sprite + '#icon-map-pin'} />
-              </svg>
-              <span>{props.item.location}</span>
-            </div>
+            <span
+              className={css.rating}
+            >{`${props.item.rating} (${props.item.reviews.length} Reviews)`}</span>
           </div>
-          <p className={css.price}>{'€' + props.item.price.toFixed(2)}</p>
+          <div className={css.tag}>
+            <svg className={css.icon} width="16" height="16">
+              <use href={sprite + '#icon-map-pin'} />
+            </svg>
+            <span>{props.item.location}</span>
+          </div>
+        </div>
+        <p className={css.price}>{'€' + props.item.price.toFixed(2)}</p>
 
+        <div className={css.scrolled}>
           <ul className={css.gallery}>
             <li>
               <img
@@ -150,7 +151,7 @@ const Modal = props => {
               <Feautures item={props.item} />
             )}
             {featuresReviewsToggle === 'reviews' && (
-              <div className={css.reviews}>reviews</div>
+              <Reviews list={props.item.reviews} />
             )}
             <Form> </Form>
           </div>

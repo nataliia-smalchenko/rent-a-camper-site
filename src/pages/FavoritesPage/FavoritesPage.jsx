@@ -28,6 +28,7 @@ const FavoritesPage = () => {
 
   return (
     <section>
+      <h1 className="visually-hidden">Favorite campers</h1>
       <div className={css['list-wrapper']}>
         <ul className={css.list}>
           {visibleAdverts.slice(0, page * 4).map(item => {
