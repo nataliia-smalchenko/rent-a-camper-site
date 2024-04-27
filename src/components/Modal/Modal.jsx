@@ -1,4 +1,3 @@
-import Tag from 'components/Tag/Tag';
 import sprite from '../../images/sprite.svg';
 import css from './Modal.module.css';
 import { useDispatch } from 'react-redux';
