@@ -27,7 +27,7 @@ To get a local copy up and running, follow these simple steps:
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/nataliia-smalchenko/test-task.git
+   git clone https://github.com/nataliia-smalchenko/rent-a-camper-site.git
    ```
 2. Install NPM packages npm install
    ```sh
