@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkrent_a_camper_site=self.webpackChunkrent_a_camper_site||[]).push([[674],{8674:function(e,a,r){r.r(a),r.d(a,{default:function(){return _}});var t="HomePage_section__bINJC",n="HomePage_header__04GYX",s="HomePage_link__-d+Of",c=r(1087),o=r(184),_=function(){return(0,o.jsxs)("section",{className:t,children:[(0,o.jsx)("h1",{className:n,children:"Explore the Great Outdoors: Premier Camper Rentals for Your Next Adventure"}),(0,o.jsx)(c.rU,{className:s,to:"/catalog",children:"Open catalog"})]})}}}]);
+//# sourceMappingURL=674.e5b77032.chunk.js.map
